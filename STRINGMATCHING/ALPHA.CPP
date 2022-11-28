@@ -33,12 +33,11 @@ int main()
     string s;
     cin>>s;
     int i,r=0,j=0,l,a[100],c=0;
-    for(i=0;i<s.length();i++)
+    for(i=0;i<s.size();i++)
     {
         if(s[i]==',')
         {
             a[j]=r;
-            // cout<<a[j]<<endl;
             r=0;
             c++;
             j++;
@@ -47,13 +46,10 @@ int main()
         r=(s[i]-48)+r*10;
     }
     a[j]=r;
-    // cout<<a[j];
     l=c+1;
-    // cout<<l;
     sort(a,a+l);
     for(i=0;i<l-1;i++)
     cout<<a[i]<<",";
     cout<<a[i];
-    
     return 0;
 }
